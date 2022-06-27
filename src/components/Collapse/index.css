@@ -1,0 +1,23 @@
+._collapse {
+}
+._collapse_body {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 1.2s ease;
+}
+._collapse_body p {
+  padding: 20px;
+}
+
+._collapse_body.entering {
+  max-height: 0;
+}
+._collapse_body.entered {
+  max-height: 99px;
+}
+._collapse_body.exiting {
+  max-height: 99px;
+}
+._collapse_body.exited {
+  max-height: 0;
+}

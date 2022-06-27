@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import { Card } from './components/Card';
+import { Collapse } from './components/Collapse';
+
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <div className='container'>
+        <div className='row mb-5'>
+          <Card>
+            <h5 className='card-title'>Card title</h5>
+            <p className='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href='#!' className='btn btn-primary'>
+              Go somewhere
+            </a>
+          </Card>
+        </div>
+        <div className='row mb-5'>
+          <Card imgSrc='https://www.fillmurray.com/640/360' alt='lorem'>
+            <h5 className='card-title'>Card title</h5>
+            <p className='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href='#!' className='btn btn-primary'>
+              Go somewhere
+            </a>
+          </Card>
+        </div>
+        <div className='row mb-5'>
+          <Collapse>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, consectetur!</p>
+          </Collapse>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
